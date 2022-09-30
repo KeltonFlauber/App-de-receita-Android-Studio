@@ -1,0 +1,267 @@
+<resources>
+    <string name="app_name">Receitas Simples e Rapidas</string>
+    //user
+    <string name="ediText">Digite seu Email aqui...</string>
+    <string name="editPassword">Digite sua senha...</string>
+    <string name="Email">Email</string>
+    <string name="password">Senha</string>
+    <string name="btn">Entrar</string>
+    <string name="cadastro">Sem conta no app? CADASTRE-SE AQUI!</string>
+    <string name="user_name">Nome do usuário</string>
+    <string name="hint_usae_name">Informe seu nome de usuário...</string>
+    <string name="passwordConfirm">Confirme a senha!</string>
+    <string name="btn_register">Cadastrar</string>
+    <string name="btn_logout">Sair da conta</string>
+    //enunciados
+    <string name="or">Ou</string>
+    <string name="modo_de_preparo">Modo De Preparo</string>
+    <string name="ingredientes">Ingredientes</string>
+    <string name="bolosEtortas">Bolos e Tortas Doce</string>
+    <string name="salgados">Salgados</string>
+    <string name="sobremesas">Sobremesas</string>
+    <string name="massas">Massas</string>
+    <string name="receitasforyou">Receitas Para Você!</string>
+    <string name="favs">Favoritos</string>
+
+
+    //------------------nomes das receitas-----------------\\
+    <string name="macarrão">Macarrão De Forno</string>
+    <string name="boloMilho">Bolo De Milho Cremoso</string>
+    <string name="nome_torta_docedeleite">Torta de Doce de Leite</string>
+    <string name="coxinha_de_frango">Coxinha De Frango</string>
+    <string name="abaxaxi_com_CREME_DE_LEITE_CONDENSADO">Abacaxi Com Creme De Leite Condensado</string>
+    <string name="SOBREMESA_GELADA_DE_CHOCOLATE">Sobremesa Gelada De Chocolate</string>
+    <string name="CHEESECAKE_DE_MORANGO_NO_POTE">Cheesecake De Morando No Pote</string>
+    <string name="PUDIM_DE_LEITE_EM_PÓ">Pudim De Leite Em Pó</string>
+    <string name="MOUSSE_DE_MARACUJÁ">Mouse De Maracujá</string>
+    <string name="PUDIM_DE_LEITE_CONDENSADO">Pudim De Leite Condensado</string>
+
+
+    //-------------------categorias-----------------------\\
+    <string name="doces">Doce</string>
+    <string name="bolos">Bolo</string>
+    <string name="salgadod_category">Salgado</string>
+    <string name="tortas">Torta</string>
+    <string name="massas_category">Massa</string>
+    <string name="sobremesas_category">Sobremesas</string>
+
+
+    //----------------------------------ingredientes-------------------------\\
+    <string name="torta_doce_de_leite_ingredienteas">200g de manteiga sem sal em temperatura ambiente
+\n\n2 xícaras (chá) de açúcar de confeiteiro peneirado (350g)
+\n\n1 colher (café) de essência de baunilha
+\n\n2 latas de creme de leite sem soro em temperatura ambiente
+\n\n100 g de biscoitos maria ou maisena quebrados grosseiramente
+\n\n400 g de doce de leite cremoso</string>
+
+
+    <string name="bolo_milho_cremoso_ingredientes">1 espiga ou lata de milho-verde
+\n\n3 ovos
+\n\n2 colheres de sopa de manteiga
+\n\n1 e meia xícara de chá de açúcar
+\n\n3 xícaras de chá de leite
+\n\n1 xicara de chá de fubá de milho
+\n\n6 colheres de sopa de farinha de trigo
+\n\n1 colher de sopa de fermento em pó
+\n\n4 colheres de sopa de queijo parmesão ralado</string>
+
+
+    <string name="macarrão_de_forno_ingredientes">500 gramas de penne cozido al dente
+\n\n2 colheres de sopa de azeite
+\n\n2 dentes de alho picado
+\n\n1 lata de molho de tomate
+\n\n200 gramas de requeijão de sua preferência
+\n\nSal a gosto
+\n\nPimenta-do-reino a gosto
+\n\n1 lata de creme de leite
+\n\n300 gramas de queijo muçarela picado
+\n\n300 gramas de presunto picado
+\n\nQueijo parmesão ralado a gosto</string>
+
+
+    <string name="coxinha_de_frango_ingredientes">Massa:
+\n\n2 litros de água
+\n\n1 kg de farinha de trigo peneirada
+\n\n2 caldos de galinha
+\n\n1 colher de margarina
+\n\n1 colher rasa de sal
+\n\n1 colher de colorífico
+\n\nRecheio:
+\n\n1 kg de peito de frango cozido e desfiado
+\n\n2 cebolas médias picadas
+\n\n1 xícara de salsinha picada
+\n\npimenta vermelha picada a gosto
+\n\n2 dentes de alho amassados
+\n\nsal a gosto
+\n\ncolorífico a gosto
+\n\nóleo ou azeite de oliva
+\n\nPara empanar:
+\n\n2 claras
+\n\n1 litro de água
+\n\n1 pitada de sal
+\n\n2 xícaras (chá) de farinha de trigo
+\n\n2 kg de farinha de pão</string>
+
+
+    <string name="abaxaxi_com_CREME_DE_LEITE_CONDENSADO_ingredientes">1 lata de abacaxi escorrida ou 1 abacaxi natural (sem o talo) e picado
+\n\nCREME BELGA
+\n\n1 lata de leite condensado
+\n\n2 gemas
+\n\n1/2 xícara de leite
+\n\nMERENGUE
+\n\n4 claras
+\n\n12 colheres de sopa de açúcar</string>
+
+
+    <string name="SOBREMESA_GELADA_DE_CHOCOLATE_ingredientes">1ª CAMADA
+\n\n1/2 lata de leite condensado
+\n\n1 caixa de creme de leite
+\n\n200 g de doce de leite
+\n\n200 ml de leite
+\n\n1/2 xícara de chocolate em pó
+\n\n12 g de gelatina sem sabor hidratada
+\n\n2ª CAMADA
+\n\n300 g de chocolate meio amargo
+\n\n1 caixa de creme de leite</string>
+
+
+    <string name="CHEESECAKE_DE_MORANGO_NO_POTE_ingredientes">MASSA:
+\n\n13 cookies triturados
+\n\n2 colheres (sopa) de manteiga
+\n\n2 colheres (sopa) de açúcar
+\n\nRECHEIO:
+\n\n2 colheres (sopa) de suco de limão
+\n\n250 g de cream cheese
+\n\n1/2 xícara de açúcar
+\n\n2 xícaras de chantili
+\n\n250 g de morangos fatiados
+\n\nCOBERTURA:
+\n\ngeleia de morango</string>
+
+
+    <string name="PUDIM_DE_LEITE_EM_PÓ_ingredinetes">3 ovos inteiros
+\n\n16 colheres (sopa) de leite em pó
+\n\n10 colheres (sopa) de açúcar
+\n\n4 xícaras de água
+\n\nCaramelo:
+\n\n2 xícaras de açúcar
+\n\n1 xícara de água</string>
+
+
+    <string name="MOUSSE_DE_MARACUJÁ_ingredientes">1 lata de leite condensado
+\n\n320 ml de suco de maracujá
+\n\n1 lata de creme de leite sem soro</string>
+
+
+    <string name="PUDIM_DE_LEITE_CONDENSADO_ingredientes">PUDIM
+\n\n1 lata de leite condensado
+\n\n1 lata de leite (medida da lata de leite condensado)
+\n\n3 ovos inteiros
+\n\nCALDA
+\n\n1 xícara (chá) de açúcar
+\n\n1/2 xícara de água</string>
+
+
+    //-------------------------------------modo de preparo------------------------------\\
+    <string name="torta_doce_de_leite_preparo">1. Bata a manteiga com o açúcar de confeiteiro e a baunilha na batedeira por uns 10 minutos ou até formar um creme branco.\n
+\n2. Sem bater, incorpore delicadamente o creme de leite até ficar homogêneo.
+\n\n3. Junte o biscoito e misture até ficar bem envolvido.
+\n\n4. Distribua metade do creme em fôrma de fundo removível (20 cm de diâmetro x 7 cm de altura).
+\n\n5. Espalhe o doce de leite com saco de confeitar, deixando 1 cm de lateral livre.
+\n\n6. Complete com o restante do creme, cubra com filme plástico e leve ao freezer por no mínimo 6 horas.
+\n\n7. No momento de servir, desenforme (passe um pano molhado em água quente por fora da fôrma para facilitar) e decore com o crocante.
+\n\nCrocante
+\n\n8. Derreta o açúcar em fogo baixo até formar um caramelo.
+\n\n9. Adicione a manteiga e a castanha e misture rapidamente.
+\n\n10. Despeje imediatamente em bancada de pedra untada ou tapete de silicone e deixe esfriar.
+\n\n11. Quebre a placa de caramelo até obter pedaços pequenos e utilize.</string>
+
+
+    <string name="bolo_milho_cremoso_preparo">1. Limpe a espiga de milho-verde e corte os grãos com uma faca afiada. Se não tiver espiga, use 1 lata de milho-verde.
+\n\n2. No liquidificador, coloque os grãos de milho-verde, 3 ovos, 2 colheres de sopa de manteiga, 1 e meia xícara de chá de açúcar, 3 xícaras de chá de leite, 1 xícara de chá de fubá de milho e 6 colheres de sopa de farinha de trigo. Bata até ficar homogêneo.
+\n\n3. Em seguida, adicione 1 colher de sopa de fermento em pó, 4 colheres de sopa de queijo parmesão ralado e bata novamente.
+\n\n4. Transfira a mistura para uma forma untada e enfarinhada.
+\n\n5. Leve para assar em forno preaquecido a 180 graus Celsius por 1 hora.</string>
+
+
+    <string name="macarrão_de_forno_preparo">1. Em uma panela, coloque 2 colheres de sopa de azeite e 2 dentes de alho picados. Deixe dourar.
+\n\n2. Depois, adicione 1 lata de molho de tomate, 200 gramas de requeijão cremoso, sal a gosto e pimenta-do-reino a gosto. Misture e deixe aquecer.
+\n\n3. Desligue o fogo e acrescente 1 lata de creme de leite, 300 gramas de queijo muçarela picado e 300 gramas de presunto picado. Misture.
+\n\n4. Em uma assadeira, coloque 500 gramas de macarrão penne cozido e cubra com o molho.
+\n\n5. Adicione queijo parmesão ralado a gosto e leve aquecer no forno por 20 minutos.</string>
+
+
+    <string name="coxinha_de_frango_preparo">Para a massa:
+\n\n1. Em uma panela, junte a água (de preferência a água que cozinhou o frango), os dois caldos de galinha, a margarina, o sal e o colorífico.
+        \n\n2. Deixe a mistura no fogo até ferver.
+        \n\n3. Após levantar fervura, junte a farinha peneirada e, com o auxílio de uma colher de pau, vá mexendo sem parar até que a massa desgrude da panela.
+        \n\n4. Retire a do fogo e coloque sobre uma superfície lisa e untada com margarina.
+        \n\n5. Deixe esfriar e vá sovando a massa constantemente para não criar casca.
+        \n\nPara o recheio:
+        \n\n1. Em uma panela com óleo ou azeite, adicione o alho amassado, a pimenta vermelha picada e a cebola picada, frite tudo até dourar, junte o peito de frango cozido e desfiado e refogue por alguns minutos. Junte o sal e o colorífico.
+        \n\n2. Desligue o fogo e acrescente a salsinha picada, misture bem e deixe esfriar.
+        \n\nPara a montagem:
+        \n\n1. Passe um pouco de manteiga nas mãos, pegue uma porção da massa (dependendo qual seja o tamanho desejado da coxinha), faça uma bolinha e com o auxílio do dedo indicador faça uma cavidade na massa.
+        \n\n2. Coloque uma porção do recheio e feche pinçando a boca da cavidade com a parte interna do polegar e do indicador.
+        \n\nPara empanar:
+        \n\n1. Misture a água e as claras, bata com o auxílio de um garfo por alguns minutos, junte o sal a farinha de trigo e bata até que as bolinhas de farinha desapareçam.
+        \n\n2. Passe as coxinhas prontas por essa mistura, tire o excesso e passe pela farinha de trigo.
+        \n\n3. Após terminar de empanar as coxinhas, repita a operação.
+        \n\n4. Para fritar:
+        \n\n5. Em um tacho ou panela funda, coloque óleo suficiente para cobrir a coxinha, deixe esquentar bem (190º a 200º C) e frite as coxinhas aos poucos para que o óleo não esfrie, o que pode fazer com que as coxinhas venham a rachar.
+        \n\n6. Espere dourar bem, escorra e aproveite.</string>
+
+
+    <string name="abaxaxi_com_CREME_DE_LEITE_CONDENSADO_preparo">1. Leve ao fogo as gemas peneiradas com o leite e o leite condensado, mexa em fogo baixo até engrossar e reserve.
+        \n\n2. Misture muito bem as claras com o açúcar e leve ao fogo baixo, mexendo sempre (é só para amornar, mas tem que ser muito rápido, pois a clara fica líquida).
+        \n\n3. Bata imediatamente na batedeira, até encorpar e virar um merengue.
+        \n\n4. Monte um refratário untado com camada de abacaxi, creme belga e o merengue.
+        \n\n5. Leve ao forno bem quente, por aproximadamente 5 minutos, só para dourar o merengue.
+        \n\n6. Sirva quente ou frio.
+        \n\n7. Se preferir, monte taças e não é necessário levar ao forno.</string>
+
+
+    <string name="SOBREMESA_GELADA_DE_CHOCOLATE_preparo">1ª CAMADA
+\n\nEm um liquidficador, bata o leite condensado, o creme de leite, o doce de leite, o leite, o chocolate em pó e a gelatina sem sabor hidratada.
+\n\nDespeje em uma forma untada com óleo e leve à geladeira por cerca de 2 horas.
+        2ª CAMADA
+        \n\nDerreta o chocolate meio amargo em banho-maria e junte o creme de leite.
+        \n\nMisture bem atér formar a ganache.
+        \n\nRetire o doce da geladeira e despeje a ganache.
+        \n\nVolte à geladeira por 30 minutos e está pronto!</string>
+
+    <string name="CHEESECAKE_DE_MORANGO_NO_POTE_preparo">1. Comece misturando todos os ingredientes da massa: a manteiga, o açúcar e os cookies já triturados.
+\n\n2. Incorpore tudo muito bem até que vire uma farofa molhadinha e reserve.
+\n\n3. Em um liquidificador junte o açúcar, o suco de limão e o cream cheese do recheio.
+\n\n4. Bata tudo muito bem.
+\n\n5. Em um recipiente já com o chantili, despeje o líquido do liquidificador e os morangos fatiados.
+\n\n6. Misture tudo com o auxilio de uma colher.
+\n\n7. Pegue um pote bem largo e comece a montar seu cream cheese.
+\n\n8. Primeiro coloque a massa, forrando todo o fundo do pote.
+\n\n9. Por cima, despeje com cuidado a mistura do recheio.
+\n\n10. Nessa hora você pode utilizar um saco de confeiteiro e uma colher, para ficar ainda mais fácil.
+\n\n11. Finalize tudo colocando a geleia de morango por cima.</string>
+
+
+    <string name="PUDIM_DE_LEITE_EM_PÓ_preparo">1. Bata todos os ingredientes no liquidificador e reserve.
+        \n\n2. Calda:
+        \n\n3. Misture em uma panela o açúcar e a água e leve ao fogo.
+        \n\n4. Não volte a mexer até que a calda chegue no ponto de caramelo, desligue o fogo.
+        \n\n5. Unte uma forma (com a calda) própria para pudim em microondas.
+        \n\n6. Coloque a mistura que foi batida no liquidificador, levando ao forno até dourar.</string>
+
+
+    <string name="MOUSSE_DE_MARACUJÁ_preparo">1. Em um liquidificador, bata o creme de leite, o leite condensado e o suco concentrado de maracujá.
+        \n\n2. Em uma tigela, despeje a mistura e leve à geladeira por, no mínimo, 4 horas.</string>
+
+
+    <string name="PUDIM_DE_LEITE_CONDENSADO_preparo">PUDIM
+\n\n1. Primeiro, bata bem os ovos no liquidificador.
+        \n\n2. Acrescente o leite condensado e o leite, e bata novamente.
+        \n\n CALDA
+        \n\n3.Derreta o açúcar na panela até ficar moreno, acrescente a água e deixe engrossar.
+        \n\n4. Coloque em uma forma redonda e despeje a massa do pudim por cima.
+        \n\n5. Asse em forno médio por 45 minutos, com a assadeira redonda dentro de uma maior com água.
+        \n\n6. Espete um garfo para ver se está bem assado.
+        \n\n7. Deixe esfriar e desenforme.</string>
+</resources>

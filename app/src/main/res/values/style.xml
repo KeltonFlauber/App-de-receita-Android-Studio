@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="bookTitle">
+        <item name="color">@color/orangeRed</item>
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">@font/annie_use_your_telescope</item>
+    </style>
+
+</resources>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/orangeRed"
+        tools:context=".tela_cadastro">
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="360dp"
+            android:layout_height="360dp"
+            android:background="@drawable/txtbackground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/bookTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/user_name"
+            android:textColor="@color/orangeRed"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="@+id/view2"
+            app:layout_constraintStart_toStartOf="@+id/view2"
+            app:layout_constraintTop_toTopOf="@+id/view2" />
+
+        <EditText
+            android:id="@+id/editTextUserName"
+            android:layout_width="350dp"
+            android:layout_height="35dp"
+            android:background="@drawable/edittxtbackgorund"
+            android:drawableRight="@drawable/ic_baseline_person_24"
+            android:hint="@string/hint_usae_name"
+            android:inputType="textEmailAddress"
+            android:textAlignment="center"
+            android:text=""
+            app:layout_constraintEnd_toEndOf="@+id/view2"
+            app:layout_constraintStart_toStartOf="@+id/view2"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/bookTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Email"
+            android:textColor="@color/orangeRed"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="@+id/view2"
+            app:layout_constraintStart_toStartOf="@+id/view2"
+            app:layout_constraintTop_toBottomOf="@+id/editTextUserName" />
+
+        <EditText
+            android:id="@+id/editTextEmail2"
+            android:layout_width="350dp"
+            android:layout_height="35dp"
+            android:background="@drawable/edittxtbackgorund"
+            android:drawableRight="@drawable/email"
+            android:hint="@string/ediText"
+            android:inputType="textEmailAddress"
+            android:textAlignment="center"
+            android:text=""
+            app:layout_constraintEnd_toEndOf="@+id/view2"
+            app:layout_constraintStart_toStartOf="@+id/view2"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/textView4"
+            style="@style/bookTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/password"
+            android:textColor="@color/orangeRed"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="@+id/view2"
+            app:layout_constraintStart_toStartOf="@+id/view2"
+            app:layout_constraintTop_toBottomOf="@id/editTextEmail2" />
+
+        <EditText
+            android:id="@+id/editTextTextPassword2"
+            android:layout_width="350dp"
+            android:layout_height="35dp"
+            android:background="@drawable/edittxtbackgorund"
+            android:drawableRight="@drawable/ic_baseline_visibility_off_24"
+            android:hint="@string/editPassword"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            android:text=""
+            app:layout_constraintEnd_toEndOf="@+id/view2"
+            app:layout_constraintStart_toStartOf="@+id/view2"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <Button
+            android:id="@+id/button"
+            style="@style/bookTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/orangeRed"
+            android:text="@string/btn_register"
+            app:layout_constraintEnd_toEndOf="@+id/view2"
+            app:layout_constraintStart_toStartOf="@+id/view2"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

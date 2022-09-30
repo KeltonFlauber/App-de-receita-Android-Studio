@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.core.widget.NestedScrollView
+    android:id="@+id/constLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/papaya"
+        tools:context=".MainActivity">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="370dp"
+            android:layout_height="270dp"
+            android:background="@drawable/txtbackground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.476"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.498" />
+
+        <EditText
+            android:id="@+id/emailEntry"
+            android:layout_width="350dp"
+            android:layout_height="35dp"
+            android:background="@drawable/edittxtbackgorund"
+            android:drawableRight="@drawable/email"
+            android:hint="@string/ediText"
+            android:inputType="textEmailAddress"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@id/view"
+            app:layout_constraintStart_toStartOf="@id/view"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"/>
+
+
+        <TextView
+            android:id="@+id/textView3"
+            style="@style/bookTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/annie_use_your_telescope"
+            android:text="@string/Email"
+            android:textColor="@color/papaya"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="@+id/view"
+            app:layout_constraintStart_toStartOf="@+id/view"
+            app:layout_constraintTop_toTopOf="@+id/view" />
+
+        <TextView
+            android:id="@+id/password"
+            style="@style/bookTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/password"
+            android:textColor="@color/papaya"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="@+id/view"
+            app:layout_constraintStart_toStartOf="@+id/view"
+            app:layout_constraintTop_toBottomOf="@id/emailEntry" />
+
+        <EditText
+            android:id="@+id/senhaEditText"
+            android:layout_width="350dp"
+            android:layout_height="35dp"
+            android:background="@drawable/edittxtbackgorund"
+            android:hint="@string/editPassword"
+            android:inputType="textWebPassword"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@id/view"
+            app:layout_constraintStart_toStartOf="@id/view"
+            app:layout_constraintTop_toBottomOf="@id/password"/>
+
+        <Button
+            android:id="@+id/btn_entrar"
+            style="@style/bookTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/papaya"
+            android:text="@string/btn"
+            android:textColor="@color/orangeRed"
+            app:layout_constraintEnd_toEndOf="@+id/view"
+            app:layout_constraintStart_toStartOf="@+id/view"
+            app:layout_constraintTop_toBottomOf="@id/senhaEditText" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="250dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logoapp12" />
+
+        <TextView
+            android:id="@+id/cadastro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/cadastro"
+            android:textColor="@color/orangeRed"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        <ToggleButton
+            android:id="@+id/senhaVisibility"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="0dp"
+            android:textOff=""
+            android:textOn=""
+            android:background="@drawable/ic_baseline_visibility_off_24"
+            app:layout_constraintEnd_toEndOf="@id/senhaEditText"
+            app:layout_constraintTop_toTopOf="@id/senhaEditText" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/or"
+            android:textColor="@color/orangeRed"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cadastro" />
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/bnt_login_google"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView6">
+        </com.google.android.gms.common.SignInButton>
+
+        <ProgressBar
+            android:id="@+id/progress_circular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bnt_login_google" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
+</layout>

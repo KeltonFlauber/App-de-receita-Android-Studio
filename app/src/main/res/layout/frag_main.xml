@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/papaya"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".lista_de_receitas">
+
+            <TextView
+                android:id="@+id/enunciado_bolosEtortas"
+                style="@style/bookTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bolos"
+                android:textColor="@color/orangeRed"
+                app:layout_constraintEnd_toEndOf="@+id/cake_book"
+                app:layout_constraintStart_toStartOf="@+id/cake_book"
+                app:layout_constraintTop_toBottomOf="@+id/cake_book" />
+
+
+            <ImageView
+                android:id="@+id/cake_book"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="32dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bololivro"
+                android:foreground="@drawable/backgeound_effect"
+                android:clickable="true"
+                app:layout_constraintEnd_toStartOf="@+id/sal_book"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+            <ImageView
+                android:id="@+id/sal_book"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/livrosalgados1"
+                android:foreground="@drawable/backgeound_effect"
+                android:clickable="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cake_book"
+                app:layout_constraintTop_toTopOf="@+id/cake_book" />
+
+            <TextView
+                android:id="@+id/title_sal"
+                style="@style/bookTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/salgados"
+                android:textColor="@color/orangeRed"
+                app:layout_constraintEnd_toEndOf="@+id/sal_book"
+                app:layout_constraintStart_toStartOf="@+id/sal_book"
+                app:layout_constraintTop_toBottomOf="@+id/sal_book" />
+
+            <ImageView
+                android:id="@+id/sobremesa_book"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/livrosobremesa"
+                android:foreground="@drawable/backgeound_effect"
+                android:clickable="true"
+                app:layout_constraintEnd_toStartOf="@+id/massas_book"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/massas_book" />
+
+            <ImageView
+                android:id="@+id/massas_book"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="56dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/livromassas"
+                android:foreground="@drawable/backgeound_effect"
+                android:clickable="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/sobremesa_book"
+                app:layout_constraintTop_toTopOf="@+id/enunciado_bolosEtortas" />
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/bookTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sobremesas"
+                android:textColor="@color/orangeRed"
+                app:layout_constraintEnd_toEndOf="@+id/sobremesa_book"
+                app:layout_constraintStart_toStartOf="@+id/sobremesa_book"
+                app:layout_constraintTop_toBottomOf="@+id/sobremesa_book" />
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/bookTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/massas"
+                android:textColor="@color/orangeRed"
+                app:layout_constraintEnd_toEndOf="@+id/massas_book"
+                app:layout_constraintStart_toStartOf="@+id/massas_book"
+                app:layout_constraintTop_toBottomOf="@+id/massas_book" />
+
+            <TextView
+                android:id="@+id/textView5"
+                style="@style/bookTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:text="@string/receitasforyou"
+                android:textColor="@color/orangeRed"
+                android:textSize="50sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/sobremesa_book"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/enunciado_bolosEtortas" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>
