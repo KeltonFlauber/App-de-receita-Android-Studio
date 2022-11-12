@@ -17,6 +17,7 @@ App android nativo com listas de receitas culinárias.
 * Kotlin
 * Kotlin Coroutines
 * MVVM
+* Firebase
 * Room DataBase
 
 <h3><b>TO DO</b></h3>
