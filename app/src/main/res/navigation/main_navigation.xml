@@ -8,6 +8,7 @@
     <fragment
         android:id="@+id/mainScreen"
         tools:layout="@layout/frag_main"
+        android:label="Home"
         android:name="com.example.receitasrapidas.fragments.MainScreen">
         <action
             android:id="@+id/action_mainScreen_to_favorites"
@@ -17,5 +18,5 @@
         android:id="@+id/favorites"
         tools:layout="@layout/favorites_frag"
         android:name="com.example.receitasrapidas.fragments.Favorites"
-        android:label="Favorites" />
+        android:label="Favourites" />
 </navigation>

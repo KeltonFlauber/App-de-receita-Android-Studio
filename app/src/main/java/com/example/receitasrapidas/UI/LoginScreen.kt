@@ -1,36 +1,32 @@
-package com.example.receitasrapidas
+package com.example.receitasrapidas.UI
 
 import android.content.Intent
-import android.opengl.Visibility
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.InputType
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.view.isGone
 import androidx.core.view.isVisible
-import com.example.receitasrapidas.databinding.ActivityMainBinding
 import androidx.databinding.DataBindingUtil
+import com.example.receitasrapidas.R
+import com.example.receitasrapidas.databinding.ActivityLoginScreenBinding
+import com.example.receitasrapidas.tela_cadastro
 import com.google.android.gms.auth.api.signin.GoogleSignIn
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.GoogleAuthCredential
 import com.google.firebase.auth.GoogleAuthProvider
-import com.google.firebase.ktx.Firebase
-import org.w3c.dom.Text
 
-class MainActivity : AppCompatActivity() {
+class LoginScreen : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityLoginScreenBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_login_screen)
         supportActionBar?.hide()
 
         binding.cadastro.setOnClickListener { registerScreen() }
@@ -93,7 +89,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun registerScreen() {
-        val intent: Intent = Intent(this@MainActivity, tela_cadastro::class.java)
+        val intent: Intent = Intent(this@LoginScreen, tela_cadastro::class.java)
         showProgressBar()
         startActivity(intent)
     }
@@ -112,7 +108,7 @@ class MainActivity : AppCompatActivity() {
             FirebaseAuth.getInstance().signInWithEmailAndPassword(binding.emailEntry.text.toString(),
                 binding.senhaEditText.text.toString()).addOnCompleteListener{
                     if(it.isSuccessful){
-                        val intent = Intent(this@MainActivity, NaviDraw::class.java)
+                        val intent = Intent(this@LoginScreen, NaviDraw::class.java)
                         showProgressBar()
                         startActivity(intent)
                         finish()
@@ -137,7 +133,7 @@ class MainActivity : AppCompatActivity() {
         val currentUser = FirebaseAuth.getInstance().currentUser
 
         if(currentUser != null){
-            val intent = Intent(this@MainActivity, NaviDraw::class.java)
+            val intent = Intent(this@LoginScreen, NaviDraw::class.java)
             startActivity(intent)
             finish()
         }

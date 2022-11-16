@@ -18,10 +18,10 @@
             android:name=".Passo_a_passo_receita"
             android:exported="false" />
         <activity
-            android:name=".BolosETortasDoces"
+            android:name=".UI.RecipeSelection"
             android:exported="false" />
         <activity
-            android:name=".NaviDraw"
+            android:name=".UI.NaviDraw"
             android:exported="false" />
         <activity
             android:name=".tela_principal"
@@ -30,7 +30,7 @@
             android:name=".tela_cadastro"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".UI.LoginScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

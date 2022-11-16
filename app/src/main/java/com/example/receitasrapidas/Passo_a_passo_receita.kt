@@ -6,21 +6,27 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.databinding.DataBindingUtil
-import androidx.fragment.app.FragmentManager
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import com.example.receitasrapidas.DataBase.DBViewModel.DbViewModel
+import com.example.receitasrapidas.DataBase.ModelDB.FavRecipe
+import com.example.receitasrapidas.Model.Receita
 import com.example.receitasrapidas.databinding.ActivityPassoApassoReceitaBinding
-import com.example.receitasrapidas.databinding.HeaderFragBinding
 import com.example.receitasrapidas.fragments.Favorites
 import com.google.firebase.firestore.FirebaseFirestore
 
 class Passo_a_passo_receita : AppCompatActivity() {
 
     lateinit var binding: ActivityPassoApassoReceitaBinding
+    lateinit var viewModel: DbViewModel
     private val dataBase = FirebaseFirestore.getInstance()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()
         binding = DataBindingUtil.setContentView(this, R.layout.activity_passo_apasso_receita)
 
+
+        viewModel = ViewModelProvider(this).get(DbViewModel::class.java)
 
         //extras input
         val intentExtras = intent.getParcelableExtra<Receita>("receita")
@@ -29,18 +35,37 @@ class Passo_a_passo_receita : AppCompatActivity() {
         binding.ingredientesTxt.text = intentExtras.ingredientes
         binding.modoPreparoTexto.text = intentExtras.preparo
 
-        binding.toggleButton.setOnClickListener {
+        val favList = FavRecipe(
+            intentExtras.img, intentExtras.title, intentExtras.ingredientes,
+            intentExtras.preparo, intentExtras.category, intentExtras.category2)
+
+        //favCheck
+        viewModel.allFavRecipes.observe(this, Observer {
+
+            for ((position) in it.withIndex()){
+                if (it[position].title == intentExtras.title){
+                    binding.toggleButton.isChecked = true
+                    binding.toggleButton.setBackgroundResource(R.drawable.ic_baseline_favorite_24)
+                }
+            }
+        })
+
+        binding.toggleButton.setOnClickListener{
             if (binding.toggleButton.isChecked){
                 binding.toggleButton.setBackgroundResource(R.drawable.ic_baseline_favorite_24)
-                dataBaseFavsAdd()
+                Toast.makeText(this, "ADD to Favorites", Toast.LENGTH_SHORT).show()
+                viewModel.insert(favList)
+                //addToRoom()
             }else{
                 binding.toggleButton.setBackgroundResource(R.drawable.ic_baseline_favorite_border_24)
+                viewModel.deleteAll(favList.title)
+                Toast.makeText(this, "Remove from Favorites", Toast.LENGTH_SHORT).show()
             }
         }
 
         //tollbar setting
         binding.imgBtnBack.setOnClickListener{
-            val intent = Intent(this, BolosETortasDoces::class.java)
+            /*val intent = Intent(this, RecipeSelection::class.java)
             if(intentExtras.category == getString(R.string.bolos) ||
                 intentExtras.category2 == getString(R.string.doces)){
                 intent.putExtra("intentBack", "bolosEtortasDoces")
@@ -51,7 +76,7 @@ class Passo_a_passo_receita : AppCompatActivity() {
             }else if(intentExtras.category == getString(R.string.sobremesas_category)){
                 intent.putExtra("intentBack", "sobremesas")
             }
-            startActivity(intent)
+            startActivity(intent)*/
             finish()
         }
     }
@@ -94,6 +119,35 @@ class Passo_a_passo_receita : AppCompatActivity() {
                 val fragment = Favorites()
                 fragment.arguments = bundle
             }
+    }
 
+    fun addToRoom(){
+
+        val intentExtras = intent.getParcelableExtra<Receita>("receita")
+
+        val favList = FavRecipe(intentExtras!!.img, intentExtras.title, intentExtras.ingredientes,
+            intentExtras.preparo, intentExtras.category, intentExtras.category2)
+
+        if (viewModel.allFavRecipes.hasObservers()){
+
+            viewModel.allFavRecipes.observe(this, Observer {
+
+                for ((position) in it.withIndex()){
+                    if (it[position].title != intentExtras.title){
+                        Toast.makeText(this, "ADD to Favorites", Toast.LENGTH_SHORT).show()
+                    }else{
+                        Toast.makeText(this, "Can´t ADD to Favorites", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            })
+
+        }else {
+            viewModel.insert(favList)
+            Toast.makeText(this, "ADD to Favorites", Toast.LENGTH_SHORT).show()
+        }
+
+        //favList.add(FavRecipe(
+            //intentExtras!!.img, intentExtras.title, intentExtras.ingredientes,
+            //intentExtras.preparo, intentExtras.category, intentExtras.category2))
     }
 }

@@ -1,6 +1,5 @@
-package com.example.receitasrapidas
+package com.example.receitasrapidas.Model
 
-import android.graphics.Bitmap
 import android.os.Parcel
 import android.os.Parcelable
 

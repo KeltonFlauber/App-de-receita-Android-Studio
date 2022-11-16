@@ -7,39 +7,79 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/papaya"
-        tools:context=".BolosETortasDoces">
+        tools:context=".UI.RecipeSelection">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar2"
+            app:layout_constraintTop_toBottomOf="@+id/appbar"
             tools:layout_editor_absoluteX="0dp" />
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar2"
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/darkOrange"
-            android:minHeight="?attr/actionBarSize"
-            android:theme="?attr/actionBarTheme"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="1dp">
+            android:theme="@style/SimpleSearchViewStyle"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
-                android:id="@+id/imgbBtnBack"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:background="@drawable/background_click_effect"
-                android:src="@drawable/ic_baseline_arrow_back_24"/>
+            <FrameLayout
+                android:id="@+id/toolbar_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="@string/bolosEtortas"
-                android:textSize="20sp"
-                android:layout_gravity="center"/>
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/darkOrange"
+                    android:minHeight="?attr/actionBarSize"
+                    android:theme="?attr/actionBarTheme"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteX="1dp">
 
-        </androidx.appcompat.widget.Toolbar>
+                    <ImageView
+                        android:id="@+id/imgbBtnBack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/background_click_effect"
+                        android:src="@drawable/ic_baseline_arrow_back_24"/>
+
+                    <ImageView
+                        android:id="@+id/imgbBtnSearch"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/background_click_effect"
+                        android:src="@drawable/ic_baseline_search_24"
+                        android:layout_margin="12dp"
+                        android:layout_gravity="end"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/bolosEtortas"
+                        android:textSize="20sp"
+                        android:layout_gravity="center"/>
+
+                </androidx.appcompat.widget.Toolbar>
+
+                <com.ferfalk.simplesearchview.SimpleSearchView
+                    android:id="@+id/searchView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:theme="@style/SimpleSearchViewStyle"/>
+            </FrameLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <TextView
+            android:id="@+id/searchResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/recyclerView" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

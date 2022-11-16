@@ -1,9 +1,8 @@
-package com.example.receitasrapidas
+package com.example.receitasrapidas.UI
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.TextView
@@ -12,11 +11,9 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
+import com.example.receitasrapidas.R
 import com.example.receitasrapidas.databinding.ActivityNaviDrawBinding
-import com.example.receitasrapidas.databinding.ActivityTelaPrincipalBinding
-import com.example.receitasrapidas.fragments.MainScreen
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.GoogleAuthCredential
 import com.google.firebase.firestore.FirebaseFirestore
 
 class NaviDraw : AppCompatActivity() {
@@ -37,13 +34,25 @@ class NaviDraw : AppCompatActivity() {
         binding.navView.menu.findItem(R.id.btnLogOut).setOnMenuItemClickListener { menuItem : MenuItem? ->
 
             FirebaseAuth.getInstance().signOut()
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, LoginScreen::class.java)
             startActivity(intent)
             finish()
             if (binding.drawerLayout.isDrawerOpen(GravityCompat.START)) {
                 binding.drawerLayout.closeDrawer(GravityCompat.START)
             }
-            true }
+            true
+        }
+
+        /*binding.navView.menu.findItem(R.id.favorites).setOnMenuItemClickListener { menuItem : MenuItem? ->
+
+            binding.imgBtnSearchNav.visibility = View.VISIBLE
+            if (binding.drawerLayout.isDrawerOpen(GravityCompat.START)) {
+                binding.drawerLayout.closeDrawer(GravityCompat.START)
+            }
+            false
+        }*/
+
+
         //Receitas Codes
         getData()
 

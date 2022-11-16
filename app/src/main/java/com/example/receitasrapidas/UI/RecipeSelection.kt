@@ -1,22 +1,36 @@
-package com.example.receitasrapidas
+package com.example.receitasrapidas.UI
 
 import android.content.Intent
 import android.content.res.Configuration
-import android.media.VolumeShaper
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.GridLayoutManager
+import com.example.receitasrapidas.Adapteers.ReceitasAdapter
+import com.example.receitasrapidas.Model.Receita
+import com.example.receitasrapidas.Passo_a_passo_receita
+import com.example.receitasrapidas.R
 import com.example.receitasrapidas.databinding.ActivityBolosEtortasDocesBinding
+import com.ferfalk.simplesearchview.SimpleSearchView
 
-class BolosETortasDoces : AppCompatActivity() {
+class RecipeSelection : AppCompatActivity() {
 
     private lateinit var binding : ActivityBolosEtortasDocesBinding
+    private lateinit var receitasList : MutableList<Receita>
+    val adapter by lazy { ReceitasAdapter(receitasList){
+
+        val intent = Intent(this, Passo_a_passo_receita::class.java)
+        intent.putExtra("receita", it)
+        startActivity(intent)
+
+    } }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()
         binding = DataBindingUtil.setContentView(this, R.layout.activity_bolos_etortas_doces)
+
+        initSearch()
 
         //Lista de Receitas
 
@@ -24,7 +38,7 @@ class BolosETortasDoces : AppCompatActivity() {
         val backButtonIntent = intent.extras?.get("intentBack")
 
 
-        val receitasList : MutableList<Receita>  = mutableListOf()
+        receitasList = mutableListOf()
 
         if(categoria1 == "bolosEtortasDoces" || backButtonIntent == "bolosEtortasDoces") {
             receitasList.add(
@@ -118,19 +132,68 @@ class BolosETortasDoces : AppCompatActivity() {
         }else{
             binding.recyclerView.layoutManager = GridLayoutManager(this, 2)
         }
-        val adapter = ReceitasAdapter(this, receitasList)
+
         binding.recyclerView.setHasFixedSize(true)
         binding.recyclerView.adapter = adapter
-        adapter.onClick = {
-            val intent = Intent(this, Passo_a_passo_receita::class.java)
-            intent.putExtra("receita", it)
-            startActivity(intent)
-        }
+        //adapter.setData(receitasList)
+        //adapter.onClick = {
+            //val intent = Intent(this, Passo_a_passo_receita::class.java)
+            //intent.putExtra("receita", it)
+            //startActivity(intent)
+        //}
 
         binding.imgbBtnBack.setOnClickListener{
             val intent = Intent(this, NaviDraw::class.java)
             startActivity(intent)
             finish()
         }
+
+        binding.imgbBtnSearch.setOnClickListener {
+            binding.searchView.showSearch()
+        }
+    }
+
+    fun initSearch(){
+
+        binding.searchView.setOnQueryTextListener(object : SimpleSearchView.OnQueryTextListener{
+            override fun onQueryTextChange(newText: String): Boolean {
+
+                binding.searchResult.text = if (adapter.search(newText)){
+                    "Not Found!"
+                }else{
+                    ""
+                }
+
+                return true
+            }
+
+            override fun onQueryTextCleared(): Boolean {
+                return false
+            }
+
+            override fun onQueryTextSubmit(query: String): Boolean {
+                return false
+            }
+        })
+
+        binding.searchView.setOnSearchViewListener(object : SimpleSearchView.SearchViewListener{
+            override fun onSearchViewClosed() {
+
+                adapter.clearSearchResult()
+
+            }
+
+            override fun onSearchViewClosedAnimation() {
+
+            }
+
+            override fun onSearchViewShown() {
+
+            }
+
+            override fun onSearchViewShownAnimation() {
+
+            }
+        })
     }
 }

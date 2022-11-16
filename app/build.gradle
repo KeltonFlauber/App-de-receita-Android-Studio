@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'com.google.gms.google-services'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -53,4 +54,14 @@ dependencies {
     implementation platform('com.google.firebase:firebase-bom:30.3.2')
     implementation 'com.google.firebase:firebase-common-ktx:20.1.2'
     implementation "com.google.firebase:firebase-firestore-ktx:24.3.1"
+
+    def room_version = "2.3.0"
+
+    implementation("androidx.room:room-runtime:2.4.3")
+    annotationProcessor "androidx.room:room-compiler:2.4.3"
+    kapt("androidx.room:room-compiler:2.4.3")
+    implementation("androidx.room:room-ktx:2.4.3")
+
+    //SearchView
+    implementation 'com.github.Ferfalk:SimpleSearchView:0.2.0'
 }
