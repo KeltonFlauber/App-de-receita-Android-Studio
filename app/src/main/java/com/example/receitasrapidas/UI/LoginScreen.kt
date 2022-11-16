@@ -12,7 +12,6 @@ import androidx.core.view.isVisible
 import androidx.databinding.DataBindingUtil
 import com.example.receitasrapidas.R
 import com.example.receitasrapidas.databinding.ActivityLoginScreenBinding
-import com.example.receitasrapidas.tela_cadastro
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -89,7 +88,7 @@ class LoginScreen : AppCompatActivity() {
     }
 
     private fun registerScreen() {
-        val intent: Intent = Intent(this@LoginScreen, tela_cadastro::class.java)
+        val intent: Intent = Intent(this@LoginScreen, RegisterScreen::class.java)
         showProgressBar()
         startActivity(intent)
     }

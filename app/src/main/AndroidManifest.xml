@@ -15,7 +15,7 @@
         android:theme="@style/Theme.ReceitasRapidas"
         tools:targetApi="31">
         <activity
-            android:name=".Passo_a_passo_receita"
+            android:name=".UI.Recipes_Details"
             android:exported="false" />
         <activity
             android:name=".UI.RecipeSelection"
@@ -24,10 +24,10 @@
             android:name=".UI.NaviDraw"
             android:exported="false" />
         <activity
-            android:name=".tela_principal"
+            android:name=".UI.MainScreen"
             android:exported="false" />
         <activity
-            android:name=".tela_cadastro"
+            android:name=".UI.RegisterScreen"
             android:exported="false" />
         <activity
             android:name=".UI.LoginScreen"

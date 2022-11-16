@@ -1,11 +1,10 @@
-package com.example.receitasrapidas
+package com.example.receitasrapidas.UI
 
-import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import androidx.databinding.DataBindingUtil
+import com.example.receitasrapidas.R
 import com.example.receitasrapidas.databinding.ActivityTelaCadastroBinding
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.FirebaseNetworkException
@@ -14,15 +13,14 @@ import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
 import com.google.firebase.auth.FirebaseAuthUserCollisionException
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.ktx.Firebase
 
-class tela_cadastro : AppCompatActivity() {
+class RegisterScreen : AppCompatActivity() {
 
     private lateinit var binding: ActivityTelaCadastroBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this,R.layout.activity_tela_cadastro)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_tela_cadastro)
         supportActionBar?.hide()
 
         binding.button.setOnClickListener { cadastrarConta() }

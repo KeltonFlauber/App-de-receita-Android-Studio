@@ -1,6 +1,5 @@
-package com.example.receitasrapidas
+package com.example.receitasrapidas.UI
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -11,11 +10,12 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.receitasrapidas.DataBase.DBViewModel.DbViewModel
 import com.example.receitasrapidas.DataBase.ModelDB.FavRecipe
 import com.example.receitasrapidas.Model.Receita
+import com.example.receitasrapidas.R
 import com.example.receitasrapidas.databinding.ActivityPassoApassoReceitaBinding
 import com.example.receitasrapidas.fragments.Favorites
 import com.google.firebase.firestore.FirebaseFirestore
 
-class Passo_a_passo_receita : AppCompatActivity() {
+class Recipes_Details : AppCompatActivity() {
 
     lateinit var binding: ActivityPassoApassoReceitaBinding
     lateinit var viewModel: DbViewModel

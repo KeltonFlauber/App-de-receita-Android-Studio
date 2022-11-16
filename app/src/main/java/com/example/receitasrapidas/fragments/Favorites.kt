@@ -3,22 +3,19 @@ package com.example.receitasrapidas.fragments
 import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.receitasrapidas.Adapteers.FavRecipesAdapter
 import com.example.receitasrapidas.Adapteers.ReceitasAdapter
 import com.example.receitasrapidas.DataBase.DBViewModel.DbViewModel
 import com.example.receitasrapidas.DataBase.ModelDB.toReceita
 import com.example.receitasrapidas.Model.Receita
-import com.example.receitasrapidas.Passo_a_passo_receita
+import com.example.receitasrapidas.UI.Recipes_Details
 import com.example.receitasrapidas.databinding.FavoritesFragBinding
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -29,7 +26,7 @@ class Favorites : Fragment() {
     private val dataBase = FirebaseFirestore.getInstance()
     private val adapter by lazy { ReceitasAdapter(recipeList){
 
-        val intent = Intent(this@Favorites.requireContext(), Passo_a_passo_receita::class.java)
+        val intent = Intent(this@Favorites.requireContext(), Recipes_Details::class.java)
         intent.putExtra("receita", it)
         startActivity(intent)
 
@@ -37,7 +34,7 @@ class Favorites : Fragment() {
 
     private val adapterDb by lazy { FavRecipesAdapter(requireContext()){
 
-        val intent = Intent(this@Favorites.requireContext(), Passo_a_passo_receita::class.java)
+        val intent = Intent(this@Favorites.requireContext(), Recipes_Details::class.java)
         intent.putExtra("receita", it)
         startActivity(intent)
 

@@ -8,7 +8,6 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.receitasrapidas.Adapteers.ReceitasAdapter
 import com.example.receitasrapidas.Model.Receita
-import com.example.receitasrapidas.Passo_a_passo_receita
 import com.example.receitasrapidas.R
 import com.example.receitasrapidas.databinding.ActivityBolosEtortasDocesBinding
 import com.ferfalk.simplesearchview.SimpleSearchView
@@ -19,7 +18,7 @@ class RecipeSelection : AppCompatActivity() {
     private lateinit var receitasList : MutableList<Receita>
     val adapter by lazy { ReceitasAdapter(receitasList){
 
-        val intent = Intent(this, Passo_a_passo_receita::class.java)
+        val intent = Intent(this, Recipes_Details::class.java)
         intent.putExtra("receita", it)
         startActivity(intent)
 
